@@ -1,49 +1,119 @@
 /* index.html */
 
+/* body */
 body {
 	overflow-x: hidden;
 }
 
-.navbar .nav-link {
-	font-size: 14px;
-	text-transform: uppercase;
-	padding-left: 0.8rem !important;
-	padding-right: 1.3rem !important;
-}
-
-.navbar .nav-item.active {
-	border-left: rgb(121, 121, 121) 3px solid;
-}
-
+/* set slider height */
 .carousel-item {
-	height: 450px;
+	height: 730px;
 }
 
+/* slide1 image*/
 .carousel-image-1 {
-	background: url('../img/image1.jpg');
+	background: url('/img/bg/homebg1.jpg');
 	background-size: cover;
+	opacity: 0.3;
+	animation: zoomin 10s;
 }
 
+/* slide2 image*/
 .carousel-image-2 {
-	background: url('../img/image2.jpg');
+	background: url('/img/bg/homebg2.jpg');
 	background-size: cover;
+	animation: zoomin 10s;
 }
 
+/* slide3 image*/
 .carousel-image-3 {
-	background: url('../img/image3.jpg');
+	background: url('/img/bg/homebg3.jpg');
 	background-size: cover;
+	animation: zoomin 10s;
+}
+/* keyframes for zoomin animation */
+@keyframes zoomin {
+	from {
+		transform: scale(1, 1);
+	}
+	to {
+		transform: scale(1.19, 1.19);
+	}
 }
 
-#home-heading {
-	position: relative;
-	min-height: 200px;
-	background: url('../img/lights.jpg');
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	text-align: center;
+/* control fade duration of slider */
+.carousel-fade .carousel-item {
+	opacity: 0;
+	transition-duration: 0.9s;
+	transition-property: opacity;
+}
+
+/* media query to adjust slider image position */
+@media (max-width: 767px) {
+	.carousel-image-1 {
+		background-position: -440px 0;
+	}
+
+	.carousel-image-2 {
+		background-position: -420px 0;
+	}
+
+	.carousel-image-3 {
+		background-position: -140px 0;
+	}
+}
+
+/* silder1 text */
+.caption-class-1 {
+	bottom: 260px;
+	color: black;
+	animation: zoomout 10s;
+}
+
+/* silder2 text */
+.caption-class-2 {
+	bottom: 260px;
+	color: black;
+	animation: zoomout 10s;
+}
+
+/* silder3 text */
+.caption-class-3 {
+	bottom: 260px;
 	color: white;
+	animation: zoomout 10s;
 }
 
+/* keyframes for zoomout animation */
+@keyframes zoomout {
+	from {
+		transform: scale(1, 1);
+	}
+	to {
+		transform: scale(0.81, 0.81);
+	}
+}
+
+/* media queries to adjust heading positions */
+@media (max-width: 459.5px) {
+	.caption-class-1 {
+		bottom: 235px;
+	}
+}
+@media (max-width: 518px) {
+	/* silder2 text */
+	.caption-class-2 {
+		bottom: 232px;
+	}
+}
+@media (max-width: 489px) {
+	/* silder3 text */
+	.caption-class-3 {
+		bottom: 235px;
+	}
+}
+
+/* dark-overlay for video section */
 .dark-overlay {
 	position: absolute;
 	top: 0;
@@ -53,70 +123,730 @@ body {
 	background: rgba(0, 0, 0, 0.7);
 }
 
+/* video section */
 #video-play {
 	position: relative;
-	min-height: 200px;
-	background: url('../img/media.jpg');
+	min-height: 400px;
+	background: url('/img/video-bg.jpg');
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	background-position: 0 -300px;
+	background-position: center center;
 	text-align: center;
 	color: white;
 }
 
+/* set modal width */
+.modal-dialog-box {
+	min-width: 60%;
+}
+
+/* media queries to adjust modal height */
+@media (max-width: 621px) {
+	.modal-dialog-box iframe {
+		height: 400px;
+	}
+}
+@media (max-width: 421px) {
+	.modal-dialog-box iframe {
+		height: 300px;
+	}
+}
+
+/* video section button */
 #video-play a {
 	color: white;
 }
 
-#main-footer {
-	background: black;
-}
-
-@media (max-width: 306.5px) {
-	#home-heading {
-		min-height: 250px;
+/* media query to adjust video play section */
+@media (min-width: 448.5px) and (max-width: 767.5px) {
+	#adjust-top {
+		margin-top: 32px;
 	}
 }
 
+/* image in photo gallery */
+.content_img div {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: white;
+	color: black;
+	margin-bottom: 5px;
+	font-family: 'Merriweather', serif;
+	font-size: large;
+	opacity: 0;
+	visibility: hidden;
+	-webkit-transition: visibility 0s, opacity 0.5s linear;
+	transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* hover on image */
+.content_img:hover {
+	cursor: pointer;
+}
+
+/* image hover div */
+.content_img:hover div {
+	width: 150px;
+	padding: 15px 35px;
+	visibility: visible;
+	opacity: 0.7;
+}
+
+/* adjust property for comtemporary section */
+#danceform:hover div {
+	width: 180px;
+	padding: 15px 20px;
+}
+
 /* about.html */
-#page-header {
-	height: 200px;
-	background: url('../img/image4.jpg');
-	background-position: 0 -100px;
+
+/* about page header */
+#about-page-header {
+	height: 600px;
+	background: url('/img/bg/aboutbg.jpg');
+	background-position: 0 -200px;
 	background-attachment: fixed;
 	color: white;
 	border-bottom: 1px #eee solid;
-	padding-top: 50px;
+	padding-top: -100x;
 }
 
+/* media queries to adjust about page background image position */
+@media (max-width: 1041px) {
+	#about-page-header {
+		background-position: -400px -200px;
+	}
+}
+@media (max-width: 625px) {
+	#about-page-header {
+		background-position: -700px -200px;
+	}
+}
+
+/* about page heading */
+#about-heading {
+	padding-top: 250px;
+}
+
+/* media query to adjust about page heading */
+@media (max-width: 247.5px) {
+	#about-heading {
+		padding-top: 230px;
+	}
+}
+
+/* heading in about page */
+#page-header.row {
+	padding-top: 100px;
+}
+
+/* image in about page */
 .about-img {
 	margin-top: -50px;
 }
 
+/* media queries to adjust header in about page */
 @media (min-width: 991.5px) {
 	#about-row {
 		padding-top: 1.5rem !important;
 	}
 }
-
 @media (min-width: 1200.5px) {
 	#about-row {
 		padding-top: 2rem !important;
 	}
 }
 
+/* transition for card flip */
+.card-flip > div {
+	backface-visibility: hidden;
+	transition: transform 300ms;
+	transition-timing-function: linear;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	display: flex;
+}
+
+/* transform for front of card */
+.card-front {
+	transform: rotateY(0deg);
+}
+
+/* transform for back of card */
+.card-back {
+	transform: rotateY(180deg);
+	position: absolute;
+	top: 0;
+}
+
+/* transform for hover at front of card */
+.card-flip:hover .card-front {
+	transform: rotateY(-180deg);
+}
+
+/* transform for hover at back of card */
+.card-flip:hover .card-back {
+	transform: rotateY(0deg);
+}
+
+/* media query to adjsut card contents */
+@media (max-width: 394.5px) {
+	.donotdisplay {
+		display: none;
+	}
+}
+
 /* services.html */
 
+/* services page header */
+#services-page-header {
+	height: 600px;
+	background: url('/img/bg/servicesbg.jpg');
+	background-size: cover;
+	background-attachment: fixed;
+	color: white;
+	border-bottom: 1px #eee solid;
+	padding-top: -100x;
+}
+
+/* media queries to adjust services page background image position */
+@media (max-width: 1041px) {
+	#services-page-header {
+		background-position: -100px 0px;
+	}
+}
+@media (max-width: 625px) {
+	#services-page-header {
+		background-position: -400px 0px;
+	}
+}
+
+/* services page heading */
+#services-heading {
+	padding-top: 250px;
+}
+
+/* media query to adjust services page heading */
+@media (max-width: 325.8px) {
+	#services-heading {
+		padding-top: 230px;
+	}
+}
+@media (max-width: 400px) {
+	.btn.filter {
+		padding-left: 1.1rem;
+		padding-right: 1.1rem;
+	}
+}
+
+/* media queries to adjust glance gallery size */
+@media (min-width: 767.8px) {
+	#gallery2 .container {
+		max-width: 80%;
+	}
+}
+@media (min-width: 991.8px) {
+	#gallery2 .container {
+		max-width: 70%;
+	}
+}
+
+/* teachers section container */
+#teachers .container {
+	margin-bottom: 40px;
+	margin-top: 20px;
+}
+
+/* teachers section images */
+#teachers img {
+	margin-top: -50px;
+}
+
+/* teachers section h5 */
+#teachers h5 {
+	color: #5d6368;
+}
+
+/* teachers section hover card */
+#teachers .card:hover {
+	background: #3292a6;
+	color: #fff;
+}
+
+/* teachers section icon */
+#teachers .card i {
+	color: #3292a6;
+}
+
+/* teachers section icon on card hover */
+#teachers .card:hover i {
+	color: rgb(228, 228, 228);
+}
+
+/* teachers section icon on icon hover */
+#teachers .card i:hover {
+	color: rgb(255, 255, 255);
+}
+
+/* teachers section hover h5 */
+#teachers .card:hover h5 {
+	color: #302f2f;
+}
+
+/* media queries to adjust images of teachers */
+@media (max-width: 768px) {
+	.mb-pic {
+		margin-bottom: 4rem;
+	}
+}
+@media (max-width: 991.5px) {
+	.mb-pic {
+		margin-bottom: 45px;
+	}
+}
+
+/* background color for plans */
+.bg-col {
+	background-color: rgb(223, 223, 223);
+}
+.bg-col:hover {
+	background-color: rgb(240, 240, 240);
+}
+
+/* FAQs section card */
 #faq .card {
 	border: #444;
 }
 
+/* FAQs section a */
 #faq a {
 	color: white;
 	text-decoration: none;
 }
 
+/* FAQs section background-color */
 #faq .card-body,
 #faq .card-header {
 	background: #333;
+}
+
+/* achievements.html */
+
+/* achievements page header */
+#achievements-page-header {
+	height: 600px;
+	background: url('/img/bg/achievementsbg.jpg');
+	background-position: 0 -30px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: white;
+	border-bottom: 1px #eee solid;
+	padding-top: -100x;
+}
+
+/* media query to adjust achievements page background image */
+@media (max-width: 585px) {
+	#achievements-page-header {
+		background-position: -300px 0px;
+		background-size: cover;
+	}
+}
+
+/* media query to adjust achievements page heading */
+@media (max-width: 462.5px) {
+	#achieve-heading {
+		padding-top: 230px;
+	}
+}
+
+/* achievements page heading */
+#achieve-heading {
+	padding-top: 250px;
+}
+
+/* media queries to adjust achievements page heading */
+@media (max-width: 349px) {
+	#achieve-heading h1 {
+		font-size: 50px;
+	}
+}
+@media (max-width: 312px) {
+	#achieve-heading h1 {
+		font-size: 45px;
+	}
+}
+
+/* color change when hover on achievements card */
+.bghover:hover {
+	background-color: rgb(211, 211, 211);
+}
+
+/* media queries to adjust cards in achievements section */
+@media (min-width: 576px) {
+	#achievements-section .card-columns {
+		column-count: 2;
+	}
+}
+@media (min-width: 768px) {
+	#achievements-section .card-columns {
+		column-count: 3;
+	}
+}
+
+/* contact.html */
+
+/*contact page header */
+#contact-page-header {
+	height: 600px;
+	background: url('/img/bg/contactbg.png');
+	background-position: 0 -40px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: white;
+	border-bottom: 1px #eee solid;
+	padding-top: -100x;
+}
+
+/* media queries to adjust contact page background image position */
+@media (max-width: 900px) {
+	#contact-page-header {
+		background-position: -200px -40px;
+	}
+}
+@media (max-width: 620px) {
+	#contact-page-header {
+		background-position: -400px -40px;
+	}
+}
+
+/* contact page heading */
+#contact-heading {
+	padding-top: 250px;
+}
+
+/* media query to adjust contact page heading */
+@media (max-width: 284.5px) {
+	#contact-heading {
+		padding-top: 230px;
+	}
+}
+
+/* box section in staff */
+#staff .box {
+	position: relative;
+	overflow: hidden;
+	width: fit-content;
+	display: inline-block;
+}
+
+/* cover section in staff */
+#staff .cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(87, 100, 112, 0.8);
+	transition: opacity 0.15s ease-in;
+	opacity: 0;
+	/* padding-top: 70px; */
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+/* image hover for staff */
+#staff .cover:hover {
+	opacity: 1;
+}
+
+/* icon for staff */
+#staff .social {
+	opacity: 0.86;
+	color: white;
+}
+
+/* icon hover for staff */
+#staff .social:hover {
+	opacity: 1;
+}
+
+/* navbar menu */
+
+/* top navbar dark and transparent */
+#og {
+	background: rgba(0, 0, 0, 0.3);
+}
+
+/* top navbar links */
+#og .nav-link {
+	font-size: 16px;
+	text-transform: uppercase;
+	padding-left: 0.3rem !important;
+	padding-right: 1.1rem !important;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-right: 5px;
+}
+
+/* bottom navbar */
+.navbar {
+	padding: 0;
+	background: rgb(0, 0, 0);
+	backface-visibility: hidden;
+}
+
+/* navbar active link */
+.navbar .nav-item.active {
+	border-left: rgb(226, 226, 226) 3px solid;
+	color: #fff;
+}
+
+/* navbar font properties */
+.navbar-dark .navbar-nav {
+	font-size: 15px;
+	color: #aaa;
+	font-weight: 400;
+}
+
+/* navbar link properties */
+.navbar-dark .navbar-nav .nav-link {
+	color: #aaa;
+	font-size: 14px;
+	text-transform: uppercase;
+	border: 0;
+}
+
+/* navbar links hover */
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+	color: #fff;
+	outline: 0;
+}
+
+/* bottom navbar links */
+.navbar-expand-md .navbar-nav .nav-link {
+	padding-left: 0.4rem !important;
+	padding-right: 1.2rem !important;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/* hamburger icon margin */
+#hamburger1 {
+	margin-right: 18px;
+}
+#hamburger2 {
+	margin-right: 3px;
+}
+#hamburger3 {
+	margin-right: 11px;
+}
+
+/* navbar in footer */
+.footer-menu {
+	margin-top: 4px;
+}
+
+/* footer */
+
+/* footer top margin */
+footer {
+	margin-top: 80px;
+}
+
+/* footer map section */
+.map-container {
+	overflow: hidden;
+	position: relative;
+	height: 0;
+}
+
+/* footer map iframe */
+.map-container iframe {
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+/* footer top */
+.footer-top {
+	padding: 60px 0;
+	background: rgb(61, 12, 107);
+	text-align: left;
+	color: rgb(255, 255, 255);
+}
+
+/* footer top h3 */
+.footer-top h3 {
+	padding-bottom: 10px;
+	color: #fff;
+}
+
+/* footer about section */
+.footer-about p a {
+	color: #aaa;
+	border-bottom: 1px dashed #666;
+}
+
+/* footer about section hover */
+.footer-about p a:hover,
+.footer-about p a:focus {
+	color: #fff;
+	border-color: #aaa;
+}
+
+/* footer contact section */
+.footer-contact p {
+	word-wrap: break-word;
+}
+
+/* footer contact section icon */
+.footer-contact i {
+	padding-right: 10px;
+	font-size: 18px;
+	color: rgb(255, 255, 255);
+}
+
+/* footer contact section paragraph & link */
+.footer-contact p a {
+	color: rgb(192, 192, 192);
+	border-bottom: 1px dashed #666;
+}
+
+/* footer contact section hover */
+.footer-contact p a:hover,
+.footer-contact p a:focus {
+	color: #fff;
+	border-color: #aaa;
+	text-decoration: none;
+}
+
+/* footer social section */
+.footer-social a {
+	display: inline-block;
+	margin-right: 20px;
+	margin-bottom: 8px;
+	color: rgb(192, 192, 192);
+	border: 0;
+}
+
+/* footer social section hover */
+.footer-social a:hover,
+.footer-social a:focus {
+	color: #fff;
+	border: 0;
+}
+
+/* footer social section icon */
+.footer-social i {
+	font-size: 24px;
+	vertical-align: middle;
+}
+
+/* footer bottom section */
+.footer-bottom {
+	padding: 15px 0;
+	background: rgb(0, 0, 0);
+	text-align: left;
+	color: #aaa;
+}
+
+/* copyright section */
+.footer-copyright p {
+	margin: 0;
+	padding: 0.5rem 0;
+}
+
+/* copyright section links */
+.footer-copyright a {
+	color: #fff;
+	border: 0;
+}
+
+/* copyright section hover */
+.footer-copyright a:hover,
+.footer-copyright a:focus {
+	color: #aaa;
+	border: 0;
+	text-decoration: none;
+}
+
+/* media queries for navbar and footer */
+
+/* media query to adjust postion of footer top and social section */
+@media (min-width: 992px) and (max-width: 1199px) {
+	.footer-top {
+		padding: 40px 0;
+	}
+
+	.footer-social a {
+		margin-right: 10px;
+	}
+}
+
+/* media query to adjust navbar links */
+@media (max-width: 575px) {
+	.navbar-expand-md .navbar-nav .nav-link {
+		padding-right: 0.5rem !important;
+	}
+
+	.navbar-dark .navbar-nav .nav-link {
+		color: white;
+	}
+}
+
+/* media query to adjust navbar & footer links & icons */
+@media (min-width: 768px) and (max-width: 991px) {
+	.footer-top {
+		padding: 40px 0;
+	}
+	.footer-contact i {
+		padding-right: 5px;
+	}
+	.footer-social a {
+		margin-right: 10px;
+	}
+	.navbar-expand-md .navbar-nav .nav-link {
+		padding-left: 0.6rem;
+		padding-right: 0.6rem;
+	}
+}
+
+/* media query to align footer sections to the center */
+@media (max-width: 767.5px) {
+	.footer-bottom,
+	.footer-social {
+		text-align: center;
+	}
+
+	.footer-top {
+		padding: 40px 0;
+		text-align: center;
+	}
+}
+
+/* media query to adjust positioning of navbar & footer */
+@media (max-width: 768px) {
+	.footer-contact i {
+		padding-right: 5px;
+	}
+
+	.footer-social a {
+		margin: 0 10px;
+	}
+
+	.navbar {
+		justify-content: center;
+	}
+
+	.navbar-expand-md .navbar-nav .nav-link {
+		padding-top: 0.3rem;
+		padding-bottom: 0.3rem;
+	}
 }
