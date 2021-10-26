@@ -12,7 +12,7 @@ body {
 
 /* slide1 image*/
 .carousel-image-1 {
-	background: url('/img/bg/homebg1.jpg');
+	background: url('../img/bg/homebg1.jpg');
 	background-size: cover;
 	opacity: 0.3;
 	animation: zoomin 10s;
@@ -20,14 +20,14 @@ body {
 
 /* slide2 image*/
 .carousel-image-2 {
-	background: url('/img/bg/homebg2.jpg');
+	background: url('../img/bg/homebg2.jpg');
 	background-size: cover;
 	animation: zoomin 10s;
 }
 
 /* slide3 image*/
 .carousel-image-3 {
-	background: url('/img/bg/homebg3.jpg');
+	background: url('../img/bg/homebg3.jpg');
 	background-size: cover;
 	animation: zoomin 10s;
 }
@@ -127,7 +127,7 @@ body {
 #video-play {
 	position: relative;
 	min-height: 400px;
-	background: url('/img/video-bg.jpg');
+	background: url('../img/video-bg.jpg');
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -204,7 +204,7 @@ body {
 /* about page header */
 #about-page-header {
 	height: 600px;
-	background: url('/img/bg/aboutbg.jpg');
+	background: url('../img/bg/aboutbg.jpg');
 	background-position: 0 -200px;
 	background-attachment: fixed;
 	color: white;
@@ -303,7 +303,7 @@ body {
 /* services page header */
 #services-page-header {
 	height: 600px;
-	background: url('/img/bg/servicesbg.jpg');
+	background: url('../img/bg/servicesbg.jpg');
 	background-size: cover;
 	background-attachment: fixed;
 	color: white;
@@ -437,7 +437,7 @@ body {
 /* achievements page header */
 #achievements-page-header {
 	height: 600px;
-	background: url('/img/bg/achievementsbg.jpg');
+	background: url('../img/bg/achievementsbg.jpg');
 	background-position: 0 -30px;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -501,7 +501,7 @@ body {
 /*contact page header */
 #contact-page-header {
 	height: 600px;
-	background: url('/img/bg/contactbg.png');
+	background: url('../img/bg/contactbg.png');
 	background-position: 0 -40px;
 	background-repeat: no-repeat;
 	background-size: cover;
