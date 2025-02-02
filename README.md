@@ -1,6 +1,6 @@
 # Dance Academy Website
 
-Welcome to the **Dance Academy Website** repository! This is a fully responsive frontend website built using **HTML, CSS, jQuery, and Bootstrap** to showcase the academy's offerings and achievements.
+Welcome to the **Dance Academy Website** repository! This is a fully responsive frontend website built using **HTML, CSS, jQuery, and Bootstrap** to showcase the academy's offerings and achievements. Additionally, I have contributed to the UI design, which includes creating **paper-based prototypes** and designing **wireframes** using **Figma**.
 
 ## 🎭 Features
 
@@ -17,6 +17,8 @@ Welcome to the **Dance Academy Website** repository! This is a fully responsive 
 -   **CSS3** – Styling and responsiveness.
 -   **jQuery** – Interactive elements.
 -   **Bootstrap** – Mobile-first design framework.
+-   **Figma** – Wireframing and UI design.
+-   **Paper Prototypes** – Initial UI designs and flow concepts.
 
 ## 📂 Project Structure
 
@@ -25,6 +27,8 @@ Welcome to the **Dance Academy Website** repository! This is a fully responsive 
  ├── 📁 css                # Stylesheets
  ├── 📁 js                 # JavaScript & jQuery scripts
  ├── 📁 img                # Website images
+ ├── 📁 prototype          # Paper-based prototypes
+ ├── 📁 wireframe          # Figma wireframe
  ├── 📄 index.html         # Home page
  ├── 📄 about.html         # About page
  ├── 📄 services.html      # Services page
